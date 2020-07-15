@@ -29,7 +29,7 @@ export default class TimeSlotGroup extends Component {
     return (
       <div className="rbc-timeslot-group">
         {group.map((value, idx) => {
-          const slotProps = (slotPropGetter && slotPropGetter(value)) || {}
+          const slotProps = (slotPropGetter && slotPropGetter(value, resource)) || {}
 
           return (
             <Wrapper key={idx} value={value} resource={resource}>
